@@ -1,145 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple carousel · example</title>
+    <title>Sample Calculator</title>
     <style>
-        /* just the basics — no extra decorations */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            background: #f0eaff;
-            font-family: Arial, Helvetica, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 1rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 100px;
         }
 
-        .card {
-            max-width: 700px;
-            width: 100%;
-            background: white;
-            border-radius: 2rem;
-            padding: 2rem 1.5rem 2.5rem 1.5rem;
-            box-shadow: 0 15px 30px #b9a6dd;
-            text-align: center;
+        .calculator {
+            background-color: #055888;
+            width: 500px;
+            height: 200px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #000000;
         }
 
         h2 {
-            color: #2c2152;
-            margin-bottom: 1.8rem;
-            font-weight: 500;
-            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
-        /* ---------- SIMPLE CAROUSEL ---------- */
-        .carousel {
-            display: flex;
-            overflow-x: auto;
-            gap: 1.2rem;
-            scroll-snap-type: x mandatory;
-            padding: 0.5rem 0.2rem 1.5rem 0.2rem;
-            /* hide scrollbar if you want cleaner look (optional) */
-            scrollbar-width: thin;
-            scrollbar-color: #a58bd4 #e5d9ff;
+        input {
+            padding: 5px;
+            margin: 5px;
+            width: 200px;
         }
 
-        /* for Chrome/Safari */
-        .carousel::-webkit-scrollbar {
-            height: 8px;
-        }
-        .carousel::-webkit-scrollbar-track {
-            background: #e5d9ff;
-            border-radius: 20px;
-        }
-        .carousel::-webkit-scrollbar-thumb {
-            background: #a58bd4;
-            border-radius: 20px;
-        }
-
-        .carousel-item {
-            scroll-snap-align: start;
-            flex: 0 0 auto;
-            width: 220px;
-            height: 150px;
-            background: #7a62b5;
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
             border-radius: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            color: white;
+        }
+
+        .result {
+            margin-top: 15px;
             font-weight: bold;
-            box-shadow: 0 8px 12px #9d87cf;
-            border: 3px solid white;
+            border
         }
-
-        /* make images fit (if you use real images) */
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 1.4rem;
-        }
-
-        .carousel-slider {
-            margin-top: 1.8rem;
-            color: #4a3977;
-            background: #eee5ff;
-            padding: 0.8rem 1.2rem;
-            border-radius: 3rem;
-            font-size: 1rem;
-        }
-
-            .carousel-slider a{
-                text-decoration: none;
-                font-weight: bold;
-            }
-        
-        .carousel-scroll {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-
-        }
-    
     </style>
 </head>
 <body>
-    <div class="card">
-        <h2>Hinata Shoyo</h2>
 
-        <!-- === CAROUSEL (only HTML + CSS) === -->
-        <div class="carousel">
-            <!-- slide 1 (using colored divs with emoji – you can replace with <img> ) -->
-            <div class="carousel-item" id="slide1"><img src="https://media.tenor.com/6dOf85BKov0AAAAM/haikyuu-anime.gif"alt="Haikyu"> </div>
-            <div class="carousel-item" id="slide2"><img src="https://media1.tenor.com/m/iB3qU13UIDQAAAAd/haikyuu-hinata-shoyo.gif"alt="Haikyu"></div>
-            <div class="carousel-item" id="slide3"><img src="https://media1.tenor.com/m/aWtgpy8FmXAAAAAd/haikyuu-hinata-shouyou.gif"alt="Haikyu"></div>
-            <div class="carousel-item" id="slide4"><img src="https://media1.tenor.com/m/e7jVZGRsbtwAAAAC/anime-haikyuu.gif"alt="Haikyu"></div>
-            <div class="carousel-item" id="slide5"><img src="https://media1.tenor.com/m/iB3qU13UIDQAAAAC/haikyuu-hinata-shoyo.gif"alt="Haikyu"></div>
-            <div class="carousel-item" id="slide6"><img src="https://media1.tenor.com/m/Y5QHEzrZoTgAAAAd/hinata-volleyball.gif"alt="Haikyu"></div>
-        </div>
-    <div class="carousel-scroll">
-        <div class="carousel-slider"><a href="#slide1">Slide 1</a></div>
-        <div class="carousel-slider"><a href="#slide2">Slide 2</a></div>
-        <div class="carousel-slider"><a href="#slide3">Slide 3</a></div>
-        <div class="carousel-slider"><a href="#slide4">Slide 4</a></div>
-        <div class="carousel-slider"><a href="#slide5">Slide 5</a></div>
-        <div class="carousel-slider"><a href="#slide6">Slide 6</a></div>
-        </div>
-        
+    <div class="calculator">
+        <h2>Zak Calculator</h2>
 
-        <!-- short explanation -->
-        <p style="margin-top: 1.5rem; color:#3c2d66; background:#f3ecff; padding:0.6rem; border-radius:3rem;">
-            ✔️ <code>display: flex</code> + <code>overflow-x: auto</code> + <code>scroll-snap-type</code>
-        </p>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+
+        <br>
+
+        <button onclick="calculate('+')">Add (+)</button>
+        <button onclick="calculate('-')">Subtract (-)</button>
+        <button onclick="calculate('*')">Multiply (×)</button>
+        <button onclick="calculate('/')">Divide (÷)</button>
+        <button onclick="clearResult()">Clear (C)</button>
+
+        <div class="result" id="result">Result: 0</div>
     </div>
+
+    <script>
+        function calculate(operator) {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let result = 0;
+
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById("result").innerHTML = "Please enter valid numbers";
+                return;
+            }
+
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 === 0) {
+                        document.getElementById("result").innerHTML = "Cannot divide by zero";
+                        return;
+                    }
+                    result = num1 / num2;
+                    break;
+            }
+
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+
+        function clearResult() {
+            document.getElementById("num1").value = "";
+            document.getElementById("num2").value = "";
+            document.getElementById("result").innerHTML = "Result: 0";
+        }
+    </script>
+
 </body>
 </html>
